@@ -15,14 +15,14 @@
 #define NUM     3
 #define CTRL    4
 
-/ {
-    &sl {
-        release-after-ms = <10000>;
-    };
-    &lt {
-        tapping-term-ms = <200>;
-    };
+&sl {
+    release-after-ms = <10000>;
+};
+&lt {
+    tapping-term-ms = <200>;
+};
 
+/ {
     keymap {
         compatible = "zmk,keymap";
 
@@ -65,8 +65,8 @@
         control_layer {
             bindings = <
    &bt BT_CLR &trans     &trans       &trans       &trans   &trans     &trans     &trans   &trans &trans
-   &trans     &bt C_MUTE &kp C_VOL_DN &kp C_VOL_UP &trans   &kp C_NEXT &kp C_PREV &kp C_PP &trans &trans
-   &bt BT_NXT &trans     &kp C_BRI_UP &kp C_BRI_UP &trans   &trans     &trans     &trans   &trans &trans
+   &trans     &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &trans   &kp C_NEXT &kp C_PREV &kp C_PP &trans &trans
+   &bt BT_NXT &trans     &kp C_BRI_DN &kp C_BRI_UP &trans   &trans     &trans     &trans   &trans &trans
                          &trans       &trans       &trans   &trans     &trans     &trans
             >;
         };
