@@ -7,7 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/outputs.h>
 
 #define DEFAULT 0
@@ -40,7 +40,7 @@
 
         nav_layer {
             bindings = <
-   &trans &trans         &mmv MOVE_UP   &trans          &trans   &trans   &msc MOVE_DOWN &msc MOVE_UP &trans    &trans
+   &trans &trans         &mmv MOVE_UP   &trans          &trans   &trans   &msc SCRL_UP   &msc SCRL_DOWN &trans  &trans
    &trans &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans   &kp LEFT &kp DOWN       &kp UP       &kp RIGHT &kp DEL
    &trans &trans         &trans         &trans          &trans   &trans   &mkp LCLK      &mkp RCLK    &trans    &kp BSPC
                          &trans         &mt LSHFT HOME  &trans   &trans   &mt RGUI END   &trans
@@ -49,9 +49,9 @@
 
         sym_layer {
             bindings = <
-   &trans &trans &trans         &trans         &trans   &kp TILDE &kp AMPS  &kp ASTRK         &kp PRCNT &trans 
-   &trans &trans &trans         &trans         &trans   &kp GRAVE &kp UNDER &kp EQUAL         &kp EXCL  &kp PIPE
-   &trans &trans &trans         &trans         &trans   &kp AT    &kp PLUS  &kp MINUS         &kp HASH  &kp BSLH
+   &trans &trans &trans         &trans         &trans   &kp TILDE &kp AMPS      &kp ASTRK     &kp PRCNT &trans
+   &trans &trans &trans         &trans         &trans   &kp GRAVE &kp UNDER     &kp EQUAL     &kp EXCL  &kp PIPE
+   &trans &trans &trans         &trans         &trans   &kp AT    &kp PLUS      &kp MINUS     &kp HASH  &kp BSLH
                  &mt LALT CARET &mt LSHFT LPAR &trans   &trans    &mt RGUI RPAR &mt RCTRL DLLR 
             >;
         };
@@ -61,7 +61,7 @@
    &trans &trans &trans        &trans         &trans   &trans &kp N7        &kp N8         &kp N9 &trans
    &trans &mo FN &trans        &trans         &trans   &trans &kp N4        &kp N5         &kp N6 &trans
    &trans &trans &trans        &trans         &trans   &kp N0 &kp N1        &kp N2         &kp N3 &trans
-                 &mt LALT LBRC &mt LSHFT LBKT &trans   &trans &mt RGUI RBKT &mt RCTRL RBRC 
+                 &mt LALT LBRC &mt LSHFT LBKT &trans   &trans &mt RGUI RBKT &mt RCTRL RBRC
             >;
         };
 
